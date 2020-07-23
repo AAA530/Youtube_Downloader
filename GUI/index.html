@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Youtube Downloader</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<!-- <meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/> -->
+		<title>Youtube Downloader</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<style>
+			html,
+			body {
+				background-color: rgb(46, 46, 46);
+				color: rgb(207, 207, 207);
+				min-height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container text-center py-5">
+			<h1>Youtube Downloader</h1>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6 border border-dark py-3">
+					<form>
+						<div class="form-group">
+							<label>Link of youtube video</label>
+							<input
+								type="text"
+								class="form-control"
+								id="link"
+								placeholder="enter link here"
+							/>
+							<!-- <small id="emailHelp" class="form-text text-muted"
+								>We'll never share your email with anyone
+								else.</small
+							> -->
+						</div>
+						<div class="mx-auto" style="width: fit-content;">
+							<button type="submit" class="btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+		<!-- You can also require other files to run in this process -->
+		<script src="./renderer.js"></script>
+	</body>
 </html>
