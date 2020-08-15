@@ -29,7 +29,7 @@ def convert_to_aac(stream, file_handle):
 
 # input() #sys.argv[1]  #'https://www.youtube.com/watch?v=v2-9rIL_f4w'
 @eel.expose
-def start(video_link):
+def start_video(video_link):
     link_video = video_link
 
 
@@ -53,7 +53,7 @@ def start(video_link):
 
 
 
-eel.start("index.html",size=(500,500))
+eel.start("index.html",size=(600,600))
 
 
 

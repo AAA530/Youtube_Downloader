@@ -29,7 +29,8 @@ function getLinks() {
 
 async function callpython() {
 
-    var a = $("#link").val();
-    alert(a);
-    await eel.start(a)();
+	var a = $("#link").val();
+	$("#progress-div").show();
+	// alert(a);
+    await eel.start_video(a)();
 }
