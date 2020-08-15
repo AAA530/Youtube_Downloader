@@ -1,5 +1,6 @@
 from pytube import YouTube
 import pytube
+import json
 import sys
 import eel
 
@@ -17,7 +18,7 @@ def percent(tem, total):
 
 def progress_function(stream, chunk, bytes_remaining):
     q = int(round((1 - bytes_remaining / video.filesize) * 100, 3))
-    print(q, '% done...')
+    # print(q, '% done...')
     eel.progress(q)
 
     
@@ -41,7 +42,12 @@ def start_video(video_link):
     # yt = YouTube(link_video)
 
     title = yt.title
-    streams = yt.streams.filter(progressive=True).order_by('resolution').desc()
+    streams = yt.streams.all()
+
+    # java_call = json.dumps(streams)
+    eel.streams_log(str(streams))
+    print(streams)
+    print("****************************************************************************************")
     print(streams)
 
     print("Enter number 1 to " + str(len(streams)))

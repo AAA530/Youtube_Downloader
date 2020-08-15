@@ -34,3 +34,9 @@ async function callpython() {
 	// alert(a);
     await eel.start_video(a)();
 }
+
+eel.expose(streams_log);
+function streams_log(streams) {
+	alert("jiii");
+	console.log(streams);
+}
