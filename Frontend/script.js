@@ -37,6 +37,26 @@ async function callpython() {
 
 eel.expose(streams_log);
 function streams_log(streams) {
-	alert("jiii");
-	console.log(streams);
+	// alert("jiii");
+	streams_arr = streams.split(",");
+	console.log(streams_arr);
+	// t = "";
+	streams_arr.forEach(x => {
+		// t = t + x + "99999999999999</br>";
+		// console.log(x);
+		// var theDiv = document.getElementById("stream");
+		// var content = document.createTextNode(x);
+		// theDiv.appendChild(content);
+		ul = document.getElementById("stream");
+		var li = document.createElement("li");
+		var text = document.createTextNode(x);
+		li.appendChild(text);
+		ul.appendChild(li);
+		// $("#stream").text(x);
+
+		// $("#stream").append("<br");
+	});
+
+	// $("p").append(t);
+	// console.log(typeof streams);
 }
